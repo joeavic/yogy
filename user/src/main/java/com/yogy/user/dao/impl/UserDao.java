@@ -1,8 +1,8 @@
 package com.yogy.user.dao.impl;
 
 import com.yogy.user.dao.interfaces.UserRepository;
-import com.yogy.util.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.yogy.user.entity.User;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,26 +13,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+@Primary
 @Service
 public class UserDao implements UserRepository {
-
-	@Autowired
-	private UserRepository userRepository;
 
 	private  final MongoTemplate mongoTemplate;
 
 	public UserDao(MongoTemplate mongoTemplate) {
 		this.mongoTemplate = mongoTemplate;
-	}
-
-	@Override
-	public List<User> findByFirstName(String firstName) {
-		return userRepository.findByFirstName(firstName);
-	}
-
-	@Override
-	public List<User> findByLastName(String lastName) {
-		return userRepository.findByLastName(lastName);
 	}
 
 	@Override

@@ -1,10 +1,28 @@
-package com.yogy.util.requests;
+package com.yogy.user.requests;
 
 public class SignUpReq {
 
 	private String firstName;
 	private String lastName;
 	private String contactNumber;
+	private Double lat;
+	private Double lon;
+
+	public Double getLat() {
+		return lat;
+	}
+
+	public void setLat(Double lat) {
+		this.lat = lat;
+	}
+
+	public Double getLon() {
+		return lon;
+	}
+
+	public void setLon(Double lon) {
+		this.lon = lon;
+	}
 
 	public String getFirstName() {
 		return firstName;

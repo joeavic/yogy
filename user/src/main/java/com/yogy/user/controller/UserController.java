@@ -2,7 +2,7 @@ package com.yogy.user.controller;
 
 
 import com.yogy.user.manager.UserManager;
-import com.yogy.util.requests.SignUpReq;
+import com.yogy.user.requests.SignUpReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,6 +30,13 @@ public class UserController {
 	@PostMapping("/signUp")
 	String otp(@RequestBody SignUpReq signUpReq, HttpServletRequest request, HttpServletResponse response) throws Exception{
 		userManager.signUp(signUpReq, request, response);
+		return "Success";
+	}
+
+
+	@PostMapping("/lat")
+	String lat(@RequestParam("lat") Double lat, @RequestParam("lng") Double lng){
+		userManager.print(lat,lng);
 		return "Success";
 	}
 
