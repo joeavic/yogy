@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.yogy</groupId>
-	<artifactId>mudra</artifactId>
+	<artifactId>user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>core</name>
-	<description>Demo project for Spring Boot</description>
+	<packaging>jar</packaging>
+	<name>user</name>
+	<description>User Service for Yogy</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -33,6 +33,30 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.sgr/s2-geometry-library-java -->
+		<dependency>
+			<groupId>io.sgr</groupId>
+			<artifactId>s2-geometry-library-java</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.yogy</groupId>
+			<artifactId>utils</artifactId>
+			<version>1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
