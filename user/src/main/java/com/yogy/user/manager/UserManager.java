@@ -61,7 +61,7 @@ public class UserManager {
 		userDao.save(user);
 		redisDao.sadd(String.valueOf(parentCell.id()), user.getId());
 		updateLatLon(signUpReq);
-		response.setHeader("token", "r[vQ3J+ng)8%9''H");
+		request.setHeader("token", "r[vQ3J+ng)8%9''H");
 	}
 
 	@Async
