@@ -34,9 +34,9 @@ public class UserController {
 	}
 
 
-	@PostMapping("/lat")
+	@PostMapping("/test")
 	String lat(@RequestParam("lat") Double lat, @RequestParam("lng") Double lng){
-		userManager.print(lat,lng);
+		userManager.test(lat,lng);
 		return "Success";
 	}
 

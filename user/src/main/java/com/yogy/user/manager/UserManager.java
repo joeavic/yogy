@@ -61,23 +61,12 @@ public class UserManager {
 		System.out.println(parentCell.id());
 		userDao.save(user);
 		redisDao.sadd(String.valueOf(parentCell.id()), user.getId());
-		updateLatLon(signUpReq);
+		//TODO : set jwt token
 		Cookie cookie = new Cookie("token", "r[vQ3J+ng)8%9''H");
 		response.addCookie(cookie);
 	}
 
-	@Async
-	private void updateLatLon(SignUpReq signUpReq) {
+	public void test(Double lat, Double lng) {
 
-	}
-
-	public void print(Double lat, Double lng) {
-
-		redisDao.sadd("Tetst", "valuey");
-//		System.out.println(s2CellId.level());
-//		System.out.println(s2CellId.id());
-
-//		System.out.println("lattitude ->" + s2LatLng.lat());
-//		System.out.println("longiotude ->" + s2LatLng.lng());
 	}
 }
