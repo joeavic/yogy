@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Random;
@@ -61,7 +62,8 @@ public class UserManager {
 		userDao.save(user);
 		redisDao.sadd(String.valueOf(parentCell.id()), user.getId());
 		updateLatLon(signUpReq);
-		request.setHeader("token", "r[vQ3J+ng)8%9''H");
+		Cookie cookie = new Cookie("token", "r[vQ3J+ng)8%9''H");
+		response.addCookie(cookie);
 	}
 
 	@Async
