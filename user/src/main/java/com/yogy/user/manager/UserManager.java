@@ -1,7 +1,7 @@
 package com.yogy.user.manager;
 
+import com.yogy.user.dao.impl.UserDao;
 import com.yogy.user.entity.OTP;
-import com.yogy.util.dao.impl.UserDao;
 import com.yogy.user.dao.impl.OTPDao;
 import com.yogy.util.entity.User;
 import com.yogy.util.requests.SignUpReq;

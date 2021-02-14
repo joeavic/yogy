@@ -1,6 +1,7 @@
 package com.yogy.user.controller;
 
-import com.yogy.util.manager.UserManager;
+
+import com.yogy.user.manager.UserManager;
 import com.yogy.util.requests.SignUpReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
